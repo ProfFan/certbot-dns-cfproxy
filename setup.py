@@ -2,7 +2,7 @@ from setuptools import setup
 from setuptools import find_packages
 
 
-version = '0.0.1'
+version = '0.0.2'
 
 install_requires = [
     'acme>=0.21.1',
@@ -12,9 +12,13 @@ install_requires = [
     'zope.interface',
 ]
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name='certbot-dns-cfproxy',
     version=version,
+    long_description=long_description,
     description="Cloudflare Proxy DNS Authenticator plugin for Certbot",
     url='https://github.com/ProfFan/certbot-dns-cfproxy',
     author="Fan Jiang",
